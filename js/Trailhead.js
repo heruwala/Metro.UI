@@ -1,5 +1,5 @@
 var allData = [];
-window.onload = function(){
+window.onload = function () {
 
     // refresh every 30 seconds
     setInterval('refreshPage()', 30000);
@@ -8,28 +8,25 @@ window.onload = function(){
     var trailHeadUsers = tempUsers.user;
 
     trailHeadUsers.forEach(user => {
-        GetTrailheadAchievements(user); 
+        GetTrailheadAchievements(user);
     });
 
     setTimeout(
-        function() 
-        {
-          //do something special
-          console.log(allData);
-          var sorted = allData
-          // sort by value
-          sorted.sort(function (b, a) {
-             return a.Points - b.Points;
-          });
+        function () {
+            //do something special
+            console.log(allData);
+            var sorted = allData
+            // sort by value
+            sorted.sort(function (b, a) {
+                return a.Points - b.Points;
+            });
 
-          // Display Top 6 only
-          for (i = 0; i < 6; i++) { 
-            $( "#leader" + i ).append( document.createTextNode( (i + 1) + " - " + sorted[i].name ) );
-        }
+            // Display Top 6 only
+            for (i = 0; i < 6; i++) {
+                $("#leader" + i).append(document.createTextNode((i + 1) + " - " + sorted[i].name));
+            }
 
         }, 5000);
-
-
 };
 
 function getUsers() {
@@ -50,14 +47,14 @@ function GetTrailheadAchievements(user) {
         }
     }).done(function (data) {
         data.name = user.name;
-        allData.push(data);       
+        allData.push(data);
     });
 }
 
 
-function refreshPage() { 
+function refreshPage() {
     var today = new Date().getHours();
     if (today >= 10 && today <= 16) {
-    location.reload(); 
+        location.reload();
     }
 }
