@@ -1,17 +1,19 @@
 var allData = [];
 window.onload = function () {
 
-    // refresh every 30 seconds
+    // refresh every 30 seconds during working hours
     setInterval('refreshPage()', 30000);
 
     var tempUsers = JSON.parse(getUsers());
     var trailHeadUsers = tempUsers.user;
 
+    // Get each user's Trailhead achievement
     trailHeadUsers.forEach(user => {
         GetTrailheadAchievements(user);
     });
 
     setTimeout(
+        
         function () {
             var sorted = allData
             // sort by Points Descending
@@ -48,7 +50,6 @@ function GetTrailheadAchievements(user) {
         allData.push(data);
     });
 }
-
 
 function refreshPage() {
     var today = new Date().getHours();
