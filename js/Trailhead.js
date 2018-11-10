@@ -54,7 +54,7 @@ function GetTrailheadAchievements(user) {
 
 function refreshPage() {
     var today = new Date().getHours();
-    if (today >= 10 && today <= 16) {
+    if (today >= 8 && today <= 16) {
         location.reload();
     }
 }
