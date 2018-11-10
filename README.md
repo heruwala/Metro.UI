@@ -15,7 +15,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-None
+Data
 
 ```
 Google Account
@@ -23,10 +23,10 @@ Google Account
 
 ### Installing
 
-Deploy to any web Server
+Deploy to any web Server, Currently it is installed on my azure instance
 
 ```
-Currently it is installed on my azure instance
+None
 ```
 
 ## Running the tests
@@ -48,7 +48,7 @@ Continuous Integration on Azure Webistes
 
 ## Authors
 
-* **Dhaval Heruwala** - *Initial work* - [PurpleBooth](https://github.com/Heruwala)
+* **Dhaval Heruwala** - *Initial work* - [Heruwala](https://github.com/Heruwala)
 
 See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 

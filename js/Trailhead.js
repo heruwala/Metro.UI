@@ -23,7 +23,9 @@ window.onload = function () {
 
             // Display Top 6 only
             for (i = 0; i < 6; i++) {
-                $("#leader" + i).append(document.createTextNode((i + 1) + " - " + sorted[i].name));
+                 var span = document.createElement("span")
+                 span.innerHTML = "<span style='font-size:0.5em;line-height:15px;'>Trails: " + sorted[i].Trails + "<br>Badges: " + sorted[i].Badges + "<br>Points: " + sorted[i].Points + "</span><br><br><br><br>" + (i + 1) + ". " + sorted[i].name;
+                $("#leader" + i).append(span);
             }
 
         }, 5000);
