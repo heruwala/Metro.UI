@@ -13,10 +13,8 @@ window.onload = function () {
 
     setTimeout(
         function () {
-            //do something special
-            console.log(allData);
             var sorted = allData
-            // sort by value
+            // sort by Points Descending
             sorted.sort(function (b, a) {
                 return a.Points - b.Points;
             });
