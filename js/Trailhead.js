@@ -55,7 +55,9 @@ function GetTrailheadAchievements(user) {
 
 function refreshPage() {
     var today = new Date().getHours();
-    if (today >= 8 && today <= 16) {
+    var day = today.getDay();
+    var isWeekend = (day === 6) || (day === 0);    // 6 = Saturday, 0 = Sunday
+    if ((today >= 8 && today <= 16) && !isWeekend ) {
         location.reload();
     }
 }
